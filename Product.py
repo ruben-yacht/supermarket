@@ -35,8 +35,7 @@ class Product():
 
     def get_discounted_total_price(self, amount=1):
         if(self.is_discounted):
-            print('gonna discount with arguments',self.kwargs)
-            return self.discount_rule(orig_price=self.price, args=self.kwargs)
+            return self.discount_rule(self.price, amount,  args=self.kwargs)
 
 
 

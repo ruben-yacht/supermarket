@@ -14,12 +14,10 @@ class Counter():
         for product, value in self.cart.products.items():
             if product.is_discounted():
                 subtotal = product.price * value
-                product.get_discounted_total_price(value)
-                pass
+                total += product.get_discounted_total_price(value)
             else:
                 total += value * product.price
 
-            total += value * product.price
         return total
 
         pass
